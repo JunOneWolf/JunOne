@@ -11,7 +11,7 @@ import cn.junone.repository.HelloDao;
 @SpringBootTest
 public class JunOneApplicationTests {
     @Autowired
-    HelloDao hello;
+    private HelloDao hello;
 
     @Test
     public void contextLoads() {
