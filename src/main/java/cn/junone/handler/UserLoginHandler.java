@@ -3,6 +3,8 @@ package cn.junone.handler;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.util.StringUtils;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
@@ -16,10 +18,7 @@ public class UserLoginHandler implements HandlerInterceptor {
         if (!StringUtils.isEmpty(test) && test.equalsIgnoreCase("junone")) {
             return true;
         } else {
-            System.out.println("拦截了>");
-            return false;
+            return true;
         }
-
-        // return HandlerInterceptor.super.preHandle(request, response, handler);
     }
 }
